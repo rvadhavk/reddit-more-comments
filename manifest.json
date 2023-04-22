@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Auto Click More Comments",
+  "version": "1.0",
+  "description": "Automatically clicks 'more comments' links when they come into view on old.reddit.com",
+  "content_scripts": [
+    {
+      "matches": ["https://old.reddit.com/*"],
+      "js": ["content-script.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [ "inject.js" ],
+      "matches": [ "https://*/*" ]
+    }
+  ],
+  "host_permissions": [
+    "https://old.reddit.com/*"
+  ]
+}
